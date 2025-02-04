@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": "rabina",
+      "name": "Rabina Suwal",
+      "password": "12233",
+      "email": "rabina@gmail.com",
+      "phone": "9080808090",
+      "country": "Nepal",
+      "address": "gakjeh",
+      "gender": "female"
+    },
+    {
+      "id": "Rabina",
+      "name": "Rabina Suwal",
+      "password": "1234",
+      "email": "rabina@gmail.com",
+      "phone": "9080808090",
+      "country": "Nepal",
+      "address": "gakjeh",
+      "gender": "female"
+    },
+    {
+      "id": "rabinasuwal84@gmail.com",
+      "name": "Rabina Suwal",
+      "password": "itsmerabina#2236",
+      "email": "rabina@gmail.com",
+      "phone": "9080808090",
+      "country": "Nepal",
+      "address": "gakjeh",
+      "gender": "female"
+    },
+    {
+      "id": "rabinasuwal84@gmail.com",
+      "name": "Rabina Suwal",
+      "password": "itsmerabina#2236",
+      "email": "rabina@gmail.com",
+      "phone": "9080808090",
+      "country": "Nepal",
+      "address": "gakjeh",
+      "gender": "female"
+    },
+    {
+      "id": "rabinasuwal",
+      "name": "Rabina Suwal",
+      "password": "1234",
+      "email": "rabina@gmail.com",
+      "phone": "9080808090",
+      "country": "Nepal",
+      "address": "gakjeh",
+      "gender": "female"
+    },
+    {
+      "id": "sajina",
+      "name": "Rabina Suwal",
+      "password": "1234",
+      "email": "rabina@gmail.com",
+      "phone": "9080808090",
+      "country": "Nepal",
+      "address": "gakjeh",
+      "gender": "female"
+    },
+    {
+      "id": "rabinasuwal",
+      "name": "Rabina Suwal",
+      "password": "1234",
+      "email": "rabina@gmail.com",
+      "phone": "9080808090",
+      "country": "Nepal",
+      "address": "gakjeh",
+      "gender": "female"
+    }
+  ],
+  "jobs": [
+    {
+      "company": "Company A",
+      "position": "Frontend Developer",
+      "status": "Applied",
+      "deadline": "2025-12-01"
+    },
+    {
+      "id": "74bd",
+      "company": "amn",
+      "position": "Backend Developer",
+      "status": "Interview",
+      "deadline": "2025-02-19"
+    }
+  ]
+}
