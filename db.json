@@ -76,7 +76,8 @@
       "company": "Company A",
       "position": "Frontend Developer",
       "status": "Applied",
-      "deadline": "2025-12-01"
+      "deadline": "2025-12-01",
+      "id": "a995"
     },
     {
       "id": "74bd",
@@ -84,6 +85,34 @@
       "position": "Backend Developer",
       "status": "Interview",
       "deadline": "2025-02-19"
+    },
+    {
+      "id": "e3dc",
+      "company": "Company A",
+      "position": "Backend Developer",
+      "status": "Interview",
+      "deadline": "2025-02-13"
+    },
+    {
+      "id": "781f",
+      "company": "amn ",
+      "position": "Project Manager",
+      "status": "Applied",
+      "deadline": "2025-02-06"
+    },
+    {
+      "id": "67d2",
+      "company": "Company B",
+      "position": "QA",
+      "status": "Interview",
+      "deadline": "2025-02-14"
+    },
+    {
+      "id": "50db",
+      "company": "company B ",
+      "position": "Graphic Designer",
+      "status": "Applied",
+      "deadline": "2025-02-08"
     }
   ]
 }

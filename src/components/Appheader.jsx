@@ -3,35 +3,41 @@ import { FaUser } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../App.css';
+import FindJob from "./FindJob";
 
-    const Appheader = () => {
-        const [displayusername, setDisplayusername] = useState('');
-        const [showmenu, setShowmenu] = useState(false);
-        const usenavigate = useNavigate();
-        const location = useLocation();
-        useEffect(() => {
-            if (location.pathname === '/login' || location.pathname === '/register') {
-                setShowmenu(false);
+const Appheader = () => {
+    const [displayusername, setDisplayusername] = useState('');
+    const [showmenu, setShowmenu] = useState(false);
+    const usenavigate = useNavigate();
+    const location = useLocation();
+    const [jobs, setJobs] = useState(() => {
+        const savedJobs = localStorage.getItem("jobs");
+        return savedJobs ? JSON.parse(savedJobs) : [];
+    });
+
+    useEffect(() => {
+        if (location.pathname === '/login' || location.pathname === '/register') {
+            setShowmenu(false);
+        } else {
+            setShowmenu(true);
+            let username = sessionStorage.getItem("username");
+            if (username === '' || username === null) {
+                usenavigate('/login');
             } else {
-                setShowmenu(true);
-                let username = sessionStorage.getItem("username");
-                if (username === '' || username === null) {
-                    usenavigate('/login');
-                } else {
-                    setDisplayusername(username);
-                }
+                setDisplayusername(username);
             }
+        }
+    }, [location]);
 
-        }, [location])
+    useEffect(() => {
+        if (displayusername) {
+            toast.success(`Welcome ${displayusername}!`);
+        }
+    }, [displayusername]);
 
-        useEffect(() => {
-            if (displayusername) {
-                toast.success(`Welcome ${displayusername}!`);
-            }
-        }, [displayusername]);
-        return (
-            <>
-                <div>
+    return (
+        <>
+            <div>
                 {showmenu && 
                     <div className="header">
                         <div className="header-name">
@@ -50,9 +56,12 @@ import '../App.css';
                         </div>
                     </div>
                 }
-            </div>
-            </>
-        );
-    }
 
-    export default Appheader;
+                {/* ✅ Show FindJob only on the /findjob page */}
+                {location.pathname === "/findjob" && <FindJob jobs={jobs} />}
+            </div>
+        </>
+    );
+}
+
+export default Appheader;
