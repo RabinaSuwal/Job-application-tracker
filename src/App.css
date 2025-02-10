@@ -1,24 +1,29 @@
-
-/* .app{
-  text-align: left;
-} */
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/MonaSans.woff2") format("woff2"),
+       url("/fonts/MonaSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Register styling */
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
   padding: 10px;
 }
 
 .register-form {
   width: 100%;
   max-width: 500px;
-  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form-header {
@@ -108,9 +113,9 @@
 
 /* Login */
 .login-container{
-  display: flexbox;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .login-form {
@@ -142,19 +147,38 @@
   background-color: #218838;
 }
 
+/* Home */
+.home-container h1{
+  font-family: "Source Serif Pro", serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 76px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-container p{
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  display: flex;  
+  justify-content: center;
+}
+
 /* Appheader */
 .header {
   align-items: center;
   background-color: #D7DFDC;
-  padding: 10px;
+  padding: 10px 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
-  gap: 80px;
+  margin-bottom: 100px;
 }
 
-.header-name{
-
+.header-name h2{
+  font-size: 24px;
 }
 
 .header-welcome {
@@ -162,7 +186,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
 }
 
 .header-links {
@@ -191,6 +214,39 @@
   background-color: #e60000;
 }
 
+@media (max-width:950px) {
+  .header{
+    gap: 50px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header-welcome{
+    display: none;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .header-name {
+    font-size: 18px;
+  }
+
+  .header-links {
+    gap: 8px;
+  }
+
+  .header-link {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
 
 /* JobForm */
 .job-form {
@@ -201,6 +257,7 @@
   max-width: 400px;
   margin: auto;
   text-align: left;
+  width: 90%;
 }
 
 .job-form h2 {
@@ -241,7 +298,7 @@
   min-width: 100px;
   z-index: 10;
   padding: 5px 0;
-  display: grid;
+  display: none;
 }
 
 .menu-dropdown::before {
@@ -405,6 +462,52 @@ h2 {
 .dialog-box button:hover {
   background-color: #0056b3;
 }
+
+@media (max-width: 950px) {
+  .job-table select, .job-table input{
+    font-size: 0.7rem;
+  }
+  .job-list-container{
+    width: fit-content;
+  }
+  .job-table{
+    width: 80%;
+  }
+  .job-form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .job-form input,
+  .job-form select {
+    padding: 8px;
+  }
+
+  .menu-dropdown {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .job-form h2 {
+    font-size: 16px;
+  }
+
+  .menu-dropdown {
+    min-width: 90px;
+  }
+
+  .menu-dropdown li {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
 
 /* Findjob */
 h2 {

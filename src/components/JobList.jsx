@@ -3,7 +3,6 @@ import { useState } from "react";
 const JobList = ({ jobs, updateJob, deleteJob }) => {
   return (
     <>
-      {/* <h2>Job Listings</h2> */}
       <div className="job-list-container">
         {jobs.length > 0 ? (
           <table className="job-table">
